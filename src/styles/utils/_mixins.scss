@@ -1,0 +1,8 @@
+@use './variables' as vars;
+@use './functions' as fn;
+
+@mixin ratio($width, $height) {
+  $aspect-ratio: calc(#{$height} / #{$width});
+
+  aspect-ratio: 1 / $aspect-ratio;
+}

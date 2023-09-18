@@ -1,0 +1,12 @@
+//  Base
+@use './base/reset';
+@use './base/grid';
+
+// @use './base/typography';
+
+//  Partials
+@use './base/base';
+
+//  Components
+@use './components/header';
+@use './components/footer';

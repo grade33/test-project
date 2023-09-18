@@ -1,0 +1,50 @@
+// Min Width
+$min-xxl: 1440px;
+$min-xl: 1200px;
+$min-lg: 992px;
+$min-md: 768px;
+$min-sm: 576px;
+$min: 360px;
+
+// Max Width
+$xxl: $min-xxl - 0.02px;
+$xl: $min-xl - 0.02px;
+$lg: $min-lg - 0.02px;
+$md: $min-md - 0.02px;
+$sm: $min-sm - 0.02px;
+
+// Grid gutter
+$gutter: 30px;
+
+// Container
+:root {
+  --container: 1360px;
+  --padding: 40px;
+
+  @media (max-width: $xxl) {
+    --container: 1140px;
+    --padding: 30px;
+  }
+
+  @media (max-width: $xl) {
+    --container: 950px;
+    --padding: 25px;
+  }
+
+  @media (max-width: $lg) {
+    --container: 720px;
+    --padding: 20px;
+  }
+
+  @media (max-width: $md) {
+    --container: 530px;
+    --padding: 16px;
+  }
+
+  @media (max-width: $sm) {
+    --container: 100%;
+  }
+}
+
+$container: var(--container);
+$padding: var(--padding);
