@@ -11,6 +11,7 @@
   "rules": {
     "string-quotes": "single",
     "no-descending-specificity": null,
+    "media-query-no-invalid": null,
     "scss/no-global-function-names": null,
     "selector-class-pattern": null,
     "color-function-notation": null

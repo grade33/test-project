@@ -1,0 +1,40 @@
+@font-face {
+	font-weight: 700;
+	font-family: Lato;
+	font-style: normal;
+	src: url('@/assets/fonts/Lato-Bold.woff2') format('woff2'), url('@/assets/fonts/Lato-Bold.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 800;
+	font-family: Lato;
+	font-style: normal;
+	src: url('@/assets/fonts/Lato-Heavy.woff2') format('woff2'), url('@/assets/fonts/Lato-Heavy.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: Lato;
+	font-style: normal;
+	src: url('@/assets/fonts/Lato-Regular.woff2') format('woff2'), url('@/assets/fonts/Lato-Regular.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 600;
+	font-family: Lato;
+	font-style: normal;
+	src: url('@/assets/fonts/Lato-Semibold.woff2') format('woff2'), url('@/assets/fonts/Lato-Semibold.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 800;
+	font-family: Raleway;
+	font-style: normal;
+	src: url('@/assets/fonts/Raleway-ExtraBold.woff2') format('woff2'), url('@/assets/fonts/Raleway-ExtraBold.woff') format('woff');
+	font-display: swap;
+}
+

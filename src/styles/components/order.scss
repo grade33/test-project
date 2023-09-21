@@ -1,0 +1,132 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.order {
+  padding-top: 120px;
+  padding-bottom: 150px;
+  color: #fff;
+  background: #272733 url('@/assets/img/order-bg.jpg') no-repeat top center / contain;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 36px;
+
+    &_blue {
+      color: #3e9cdc;
+    }
+  }
+
+  &__desc {
+    color: #bbb;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    text-align: center;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      &:not(&:last-child) {
+        .order__steps-icon-block {
+          &::after {
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 15px);
+            width: 100%;
+            width: 110px;
+            height: 6px;
+            background: url('@/assets/img/points.svg');
+            transform: translateY(-50%);
+            content: '';
+          }
+        }
+      }
+    }
+
+    &-icon-block {
+      position: relative;
+      padding: 18px;
+      background: #3e9cdc;
+      border: 5px solid #286690;
+      border-radius: 50%;
+    }
+
+    &-icon {
+      width: 55px;
+      height: 55px;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    &-points {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+
+      &-icon {
+        width: 110px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+
+    &-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      width: 100%;
+    }
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      width: 100%;
+    }
+
+    &-submit {
+      width: 100%;
+      max-width: 370px;
+    }
+
+    &-range {
+      grid-column: 2 span;
+    }
+  }
+}

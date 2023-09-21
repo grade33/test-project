@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=production gulp build",
     "preview": "cross-env NODE_ENV=production gulp serve",
-    "deploy": "gh-pages -d dist -r url",
+    "deploy": "gh-pages -d dist -r git@github.com:grade33/test-project.git",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "lint:scripts": "eslint \"src/**/*.js\""
   },

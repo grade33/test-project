@@ -1,12 +1,17 @@
 //  Base
 @use './base/reset';
 @use './base/grid';
+@use './base/typography';
 
-// @use './base/typography';
+// Vendor
+@use './vendor/select.scss';
+
 
 //  Partials
 @use './base/base';
 
 //  Components
 @use './components/header';
+@use './components/hero';
+@use './components/order';
 @use './components/footer';

@@ -3,13 +3,56 @@
 @use '../utils/functions' as fn;
 
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding-top: 33px;
+  padding-bottom: 32px;
+  color: #fff;
+  background: rgba(16, 16, 29, 90%);
+  transition: transform 0.3s ease-in-out;
+
   &_blur {
-    // ! background-color
-    background: rgba(#000, 0.4);
-    backdrop-filter: blur(8px);
+    background: rgba(16, 16, 29, 90%);
   }
 
   &_hide {
     transform: translateY(-100%);
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-weight: 800;
+    font-size: 28px;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+
+    &_blue {
+      color: #42a9ed;
+    }
+  }
+
+  &__nav {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__nav-link_active {
+    color: #43abf0;
   }
 }

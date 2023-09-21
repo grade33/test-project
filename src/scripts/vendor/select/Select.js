@@ -16,3 +16,13 @@ export class Select {
     });
   }
 }
+
+/*
+<div class="select" data-name="contact">
+  <div data-value="">Предпочтительный способ связи</div>
+  <div data-value="telegram">Telegram</div>
+  <div data-value="whatsApp">WhatsApp</div>
+  <div data-value="tel">Телефон</div>
+  <div data-value="viber">Viber</div>
+</div>
+*/

@@ -1,5 +1,5 @@
 // Min Width
-$min-xxl: 1440px;
+$min-xxl: 1920px;
 $min-xl: 1200px;
 $min-lg: 992px;
 $min-md: 768px;
@@ -18,27 +18,23 @@ $gutter: 30px;
 
 // Container
 :root {
-  --container: 1360px;
-  --padding: 40px;
+  --container: 1172px;
+  --padding: 15px;
 
   @media (max-width: $xxl) {
     --container: 1140px;
-    --padding: 30px;
   }
 
   @media (max-width: $xl) {
     --container: 950px;
-    --padding: 25px;
   }
 
   @media (max-width: $lg) {
     --container: 720px;
-    --padding: 20px;
   }
 
   @media (max-width: $md) {
     --container: 530px;
-    --padding: 16px;
   }
 
   @media (max-width: $sm) {
