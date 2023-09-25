@@ -19,10 +19,15 @@
     & > * {
       flex: none;
     }
+
+    @media (max-width: vars.$xl) {
+      flex-direction: column;
+      justify-content: unset;
+    }
   }
 
   &__copyright {
-    display: inline-flex;
+    text-align: center;
 
     &_uppercase {
       text-transform: uppercase;
@@ -33,6 +38,9 @@
     align-self: stretch;
     width: 1px;
     background: #c3c3c3;
+    @media (max-width: vars.$xl) {
+      display: none;
+    }
   }
 
   &__payments,
@@ -40,6 +48,11 @@
     display: flex;
     gap: 38px;
     align-items: center;
+
+    @media (max-width: vars.$sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     &-item {
       display: flex;

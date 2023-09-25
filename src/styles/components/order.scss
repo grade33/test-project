@@ -18,13 +18,13 @@
   &__text-block {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: fn.cmin(15, 30);
     text-align: center;
   }
 
   &__title {
     font-weight: 800;
-    font-size: 36px;
+    font-size: fn.cmin(28, 36);
 
     &_blue {
       color: #3e9cdc;
@@ -40,8 +40,17 @@
   &__steps {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
+    gap: 30px 14px;
+    width: 100%;
     text-align: center;
+    @media (max-width: vars.$lg) {
+      grid-template-columns: repeat(auto-fit, 200px);
+      justify-content: center;
+    }
+
+    @media (max-width: vars.$sm) {
+      grid-template-columns: 1fr;
+    }
 
     &-item {
       display: flex;
@@ -58,9 +67,12 @@
             width: 100%;
             width: 110px;
             height: 6px;
-            background: url('@/assets/img/points.svg');
+            background: url('@/assets/img/points.svg') no-repeat center / contain;
             transform: translateY(-50%);
             content: '';
+            @media (max-width: vars.$lg) {
+              content: unset;
+            }
           }
         }
       }
@@ -72,11 +84,18 @@
       background: #3e9cdc;
       border: 5px solid #286690;
       border-radius: 50%;
+      @media (max-width: vars.$lg) {
+        padding: 10px;
+      }
     }
 
     &-icon {
       width: 55px;
       height: 55px;
+      @media (max-width: vars.$lg) {
+        width: 43px;
+        height: 43px;
+      }
     }
 
     &-title {
@@ -118,6 +137,13 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       width: 100%;
+      @media (max-width: vars.$xl) {
+        grid-template-columns: 1fr;
+
+        & > * {
+          width: 100%;
+        }
+      }
     }
 
     &-submit {
@@ -126,7 +152,9 @@
     }
 
     &-range {
-      grid-column: 2 span;
+      @media (min-width: vars.$min-xl) {
+        grid-column: 2 span;
+      }
     }
   }
 }

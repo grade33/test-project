@@ -8,8 +8,7 @@
   right: 0;
   left: 0;
   z-index: 10;
-  padding-top: 33px;
-  padding-bottom: 32px;
+  padding: fn.cmin(15, 33) 0;
   color: #fff;
   background: rgba(16, 16, 29, 90%);
   transition: transform 0.3s ease-in-out;
@@ -31,7 +30,7 @@
 
   &__logo {
     font-weight: 800;
-    font-size: 28px;
+    font-size: fn.cmin(20,28);
     font-family: Raleway, sans-serif;
     text-transform: uppercase;
 
@@ -44,15 +43,65 @@
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
+
+    &_desktop {
+      @media (max-width: vars.$lg) {
+        display: none;
+      }
+    }
+
+    &-list {
+      display: flex;
+      gap: 60px 24px;
+      align-items: center;
+
+      @media (max-width: vars.$lg) {
+        flex-direction: column;
+        align-items: unset;
+      }
+    }
+
+    &-link_active {
+      color: #43abf0;
+    }
   }
 
-  &__nav-list {
-    display: flex;
-    gap: 60px;
-    align-items: center;
-  }
+  &__menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    min-width: 40vw;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 30px;
+    overflow-y: auto;
+    background: rgba(16, 16, 29, 90%);
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0.3s ease-in-out,
+      opacity 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
 
-  &__nav-link_active {
-    color: #43abf0;
+    &_active {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media (min-width: vars.$min-lg) {
+      display: none;
+    }
+
+    @media (max-width: vars.$md) {
+      min-width: 60vw;
+    }
+
+    @media (max-width: vars.$sm) {
+      min-width: 80vw;
+    }
   }
 }

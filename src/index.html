@@ -13,7 +13,7 @@
       <header class="header">
         <div class="container header__container">
           <a href="#" class="header__logo"> LoremIpsum.<span class="header__logo_blue">net</span> </a>
-          <nav class="header__nav">
+          <nav class="header__nav header__nav_desktop">
             <ul class="header__nav-list">
               <li class="header__nav-item">
                 <a href="#" class="header__nav-link header__nav-link_active">Бизнес</a>
@@ -29,6 +29,29 @@
               </li>
             </ul>
           </nav>
+          <button class="burger" type="button">
+            <span class="burger__item"></span>
+            <span class="burger__item"></span>
+            <span class="burger__item"></span>
+          </button>
+          <div class="header__menu">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link header__nav-link_active">Бизнес</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">О нас</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Цены</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Оформить заказ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -158,28 +181,22 @@
           <span class="footer__line"></span>
           <ul class="footer__payments">
             <li class="footer__payments-item">
-              <a class="footer__payments-link" href="#">
-                <svg class="footer__payments-icon">
-                  <use xlink:href="./assets/sprite.svg#qiwi" />
-                </svg>
-                <span class="footer__payments-text">Qiwi wallet</span>
-              </a>
+              <svg class="footer__payments-icon">
+                <use xlink:href="./assets/sprite.svg#qiwi" />
+              </svg>
+              <span class="footer__payments-text">Qiwi wallet</span>
             </li>
             <li class="footer__payments-item">
-              <a class="footer__payments-link" href="#">
-                <svg class="footer__payments-icon">
-                  <use xlink:href="./assets/sprite.svg#ymoney" />
-                </svg>
-                <span class="footer__payments-text">Yandex Money</span>
-              </a>
+              <svg class="footer__payments-icon">
+                <use xlink:href="./assets/sprite.svg#ymoney" />
+              </svg>
+              <span class="footer__payments-text">Yandex Money</span>
             </li>
             <li class="footer__payments-item">
-              <a class="footer__payments-link" href="#">
-                <svg class="footer__payments-icon">
-                  <use xlink:href="./assets/sprite.svg#webmoney" />
-                </svg>
-                <span class="footer__payments-text">Web Money</span>
-              </a>
+              <svg class="footer__payments-icon">
+                <use xlink:href="./assets/sprite.svg#webmoney" />
+              </svg>
+              <span class="footer__payments-text">Web Money</span>
             </li>
           </ul>
           <span class="footer__line"></span>
